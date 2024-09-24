@@ -21,7 +21,7 @@ class RegState(StatesGroup):
     email = State()
     age = State()
 
-api = "7209215037:AAFtdHGFDWQ8WrTMbtoCZYBRqUglZIzGLGA"
+api = ""
 bot = Bot(token = api)
 disp = Dispatcher(bot,storage=MemoryStorage())
 
