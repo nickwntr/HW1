@@ -1,0 +1,8 @@
+print("Введите строку")
+InpString = input()
+print(len(InpString))
+print(InpString.upper())
+print(InpString.lower())
+print(InpString.replace(" ",""))
+print(InpString[0])
+print(InpString[-1])

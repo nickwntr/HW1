@@ -11,13 +11,13 @@ class Vehicle:
         self._color = self._COLOR_VARIANTS[random.randrange(0, len(self._COLOR_VARIANTS)-1)]
 
     def getmodel(self):
-        print(f"Модель {self._model}")
+        print(self._model)
 
     def gethorsepower(self):
-        print(f"Мощность {self._engine_power}")
+        print(self._engine_power)
 
     def getcolor(self):
-        print(f"Цвет {self._color}")
+        print(self._color)
 
     def printinfo(self):
         self.getmodel()

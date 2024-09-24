@@ -14,7 +14,9 @@ def get_matrix(x,y,values):
             matrix.append(addrow)
         for i in matrix:
             print(i)
-    else:print(matrix)
+    else:
+        print("Не удалось создать матрицу. Строка или столбец равны нулю")
+        print(matrix)
 
 print("Ведите длину, ширину массива, и его данные. Набор данных окончить END")
 x = int(input())
