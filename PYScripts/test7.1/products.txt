@@ -1,0 +1,2 @@
+Potato, 70, Vegetaples 
+Apple, 12, Fruits 
