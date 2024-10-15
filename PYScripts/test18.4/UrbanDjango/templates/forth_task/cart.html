@@ -1,0 +1,12 @@
+{% extends "forth_task/main.html" %}
+{% block pagename %}
+<h1>Корзина пуста</h1><br>
+{% endblock %}
+{% block menu %}
+{{ block.super }}
+{% endblock %}
+{% block content %}
+<form action="/">
+  <input type="submit" value="Вернуться обратно">
+</form>
+{% endblock %}

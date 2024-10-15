@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<script src="{% static 'js/login.js' %}"></script>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/goods.css' %}">
+		<meta charset="utf-8">
+		<title>Витрина</title>
+	</head>
+	<div class="header">
+		<table width="100%" id="tb1">
+			<tr>
+				<td width="30%">
+					<p align="left">Добро пожаловать на Технорынок</p>
+                    <p align="left">Магазин отличной бытовой техники</p>
+				</td>
+				<td width="15%" align="right">
+				</td>
+			</tr>
+		</table>
+	</div>
+	<body>
+		{% block content %}
+
+		{% endblock %}
+		<div class="footer">
+
+		</div>
+	</body>
+</html>

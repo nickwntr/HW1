@@ -1,0 +1,19 @@
+{% extends "forth_task/main.html" %}
+{% block pagename %}
+<h1>БЫТОВАЯ ТЕХНИКА</h1><br>
+{% endblock %}
+{% block menu %}
+{{ block.super }}
+{% endblock %}
+{% block content %}
+<ul>
+  {% for game in games %}
+<li>
+  {{game.title}}| {{game.desc}} | Стоимость:{{game.price}}<button>Купить</button>
+</li>
+  {% endfor %}
+</ul>
+<form action="/">
+  <input type="submit" value="Вернуться обратно">
+</form>
+{% endblock %}

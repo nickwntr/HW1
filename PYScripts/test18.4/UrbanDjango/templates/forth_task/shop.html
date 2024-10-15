@@ -1,0 +1,23 @@
+{% extends "forth_task/main.html" %}
+{% block pagename %}
+<h1>БЫТОВАЯ ТЕХНИКА</h1><br>
+{% endblock %}
+{% block menu %}
+{{ block.super }}
+{% endblock %}
+{% block content %}
+<ul>
+<li>
+  Холодильник <button>Купить</button>
+</li>
+<li>
+  Утюг <button>Купить</button>
+</li>
+<li>
+  Стиральная машина <button>Купить</button>
+</li>
+</ul>
+<form action="/">
+  <input type="submit" value="Вернуться обратно">
+</form>
+{% endblock %}

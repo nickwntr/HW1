@@ -1,0 +1,10 @@
+>>> ProdModel.objects.create(brand="alpha",name="sqz254",type="Fridge",price=3500) 
+<ProdModel: ProdModel object (1)>
+>>> ProdModel.objects.create(brand="ichigo",name="fp451",type="Stove",price=4600)   
+<ProdModel: ProdModel object (2)>
+>>> ProdModel.objects.all()                                                        
+<QuerySet [<ProdModel: ProdModel object (1)>, <ProdModel: ProdModel object (2)>]>
+>>> len(ProdModel.objects.all())
+2
+>>> ProdModel.objects.create(brand="Winslow",name="grm501",type="Microwave",price=3000)  
+<ProdModel: ProdModel object (3)>

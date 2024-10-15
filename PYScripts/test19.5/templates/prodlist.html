@@ -1,0 +1,55 @@
+{% extends "eshop.html" %}
+{% load static %}
+{% block content %}
+    <ul align="center" style="list-style-type:none;" >
+        {% for Prod in page_obj %}
+            <li>
+                <div class = "card">
+                    <table width="100%">
+                        <tr>
+                            <td width="150px" align="left">
+                                {% if Prod.image %}
+                                    <img src="{{ Prod.image }}" alt="{{Prod.name}}">
+                                {% else %}
+                                    <img src="{% static 'img/broken.jpg' %}" width="150px" height="150px">
+                                {% endif %}
+                            </td>
+                            <td  align="center">
+                                <p>{{Prod.type}} {{Prod.brand}} {{Prod.name}}</p>
+                                {% if Prod.desc %}
+                                <p>{{Prod.desc}}</p>
+                                {% endif %}
+                            </td>
+                            <td align="right" width="150px">
+                                <p align="center">Цена: {{Prod.price}} ₽</p>
+                                <div align="center">
+                                    <form action="" method="post" style="align: center">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn">Добавить</button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </li>
+
+
+        {% endfor %}
+    </ul>
+<div class="pagination">
+        <p>Страницы:</p>
+        <ul>
+            {% if page_obj.has_previous %}
+                <li><a href="?page=1"><<</a></li>
+                <li><a href="?page={{ page_obj.previous_page_number }}">Предыдущая</a></li>
+            {% endif %}
+            <li>{{ page_obj.number }}/{{ paginator.num_pages }}</li>
+            {% if page_obj.has_next %}
+                <li><a href="?page={{ page_obj.next_page_number }}">Следующая</a></li>
+                <li><a href="?page={{ paginator.num_pages }}">>>></a></li>
+            {% endif %}
+        </ul>
+    </div>
+{% endblock %}
+
